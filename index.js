@@ -178,7 +178,7 @@ const upload  = require('multer')({ dest: uploadPath })
     app.use(express.static('public'));
 
 
-    let socketPath = 3030
+    let socketPath = 80
     app.listen(socketPath, () => {
         console.log(`Express GraphQL Server Now Running On ${socketPath}/graphql`);
         //fs.chmodSync(socketPath, '777');
