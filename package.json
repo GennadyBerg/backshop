@@ -1,0 +1,30 @@
+{
+  "name": "shop-roles",
+  "version": "1.0.0",
+  "description": "roled shop on mm-graphql based on shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.a-level.com.ua:gitgod/shop-roles.git"
+  },
+  "keywords": [
+    "mm",
+    "graphql",
+    "mongo"
+  ],
+  "author": "Ivan Grynkin",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mm": "git+ssh://git@gitlab.a-level.com.ua:gitgod/mm.git",
+    "mm-graphql": "git+ssh://git@gitlab.a-level.com.ua:gitgod/mm-graphql.git",
+    "multer": "^1.4.2"
+  }
+}

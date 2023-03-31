@@ -1,0 +1,25 @@
+Куда лить: <br/><input type='file' id='file' />
+<a href='#' id='url'></a>
+<script>
+    file.onchange = async () => {
+        url.innerHTML = url.href = "/" + await (await fetch('/upload', {
+            method: "POST",
+            headers: localStorage.authToken ? {Authorization: 'Bearer ' + localStorage.authToken} : {},
+            body: file.files[0]
+        })).text()
+    }
+</script>
+
+<form action="/upload" method="post" enctype="multipart/form-data" id='form'>
+  <input type="file" name="photo" id='photo'/>
+</form>
+
+<script>
+    photo.onchange = async () => {
+        fetch('/upload', {
+            method: "POST",
+            headers: localStorage.authToken ? {Authorization: 'Bearer ' + localStorage.authToken} : {},
+            body: new FormData(form)
+        })
+    }
+</script>
